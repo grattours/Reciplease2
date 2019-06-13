@@ -13,7 +13,6 @@
         <!--List Favorite View Controller-->
         <scene sceneID="yf2-0l-yzH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CQu-z7-rlq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="wys-TY-ZXt" customClass="ListFavoriteViewController" customModule="Reciplease2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hm7-Ba-WaV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -42,9 +41,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0O-Iu-CwO">
-                                                    <rect key="frame" x="0.0" y="117.66666666666669" width="414" height="24"/>
+                                                    <rect key="frame" x="0.0" y="120.00000000000001" width="414" height="21.666666666666671"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -157,6 +156,7 @@
                         <segue destination="8gi-p2-RII" kind="show" identifier="segueToDetailFavorite" id="zqj-2W-jI2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQu-z7-rlq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-452.17391304347831" y="-834.78260869565224"/>
         </scene>
@@ -286,11 +286,18 @@
                         <viewLayoutGuide key="safeArea" id="gpJ-Y2-gii"/>
                     </view>
                     <navigationItem key="navigationItem" id="vr5-iE-G2b">
-                        <barButtonItem key="rightBarButtonItem" title="star" image="starred" id="rDj-Je-BhX">
-                            <connections>
-                                <action selector="favoriteButton:" destination="8gi-p2-RII" id="yhP-GM-5Qo"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="star" image="starred" id="rDj-Je-BhX">
+                                <connections>
+                                    <action selector="favoriteButton:" destination="8gi-p2-RII" id="yhP-GM-5Qo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="wfi-O7-4Sm">
+                                <connections>
+                                    <action selector="shareButton:" destination="8gi-p2-RII" id="BiS-ML-hJ9"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="detailFavoriteImageView" destination="zFx-7p-2G2" id="LTt-Bf-DR5"/>
@@ -400,10 +407,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="whG-tm-ifj">
-                                <rect key="frame" x="0.0" y="277.33333333333331" width="414" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="jst-Ec-WSa"/>
-                                </constraints>
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vZ-au-KTE">
                                 <rect key="frame" x="330" y="191.33333333333334" width="74" height="30"/>
@@ -423,20 +427,19 @@
                         <constraints>
                             <constraint firstItem="wVc-2O-XDX" firstAttribute="leading" secondItem="FHX-73-3GL" secondAttribute="leading" constant="10" id="1RZ-eo-Lxc"/>
                             <constraint firstItem="FHX-73-3GL" firstAttribute="trailing" secondItem="8i8-op-l7y" secondAttribute="trailing" constant="40" id="2cX-li-ho7"/>
+                            <constraint firstItem="whG-tm-ifj" firstAttribute="centerX" secondItem="LqW-Dv-U8d" secondAttribute="centerX" id="3ej-uf-lV7"/>
                             <constraint firstItem="3vZ-au-KTE" firstAttribute="top" secondItem="U3B-9x-lEc" secondAttribute="bottom" constant="10.5" id="C2f-mt-czK"/>
                             <constraint firstItem="8i8-op-l7y" firstAttribute="leading" secondItem="FHX-73-3GL" secondAttribute="leading" constant="40" id="LES-im-OWc"/>
                             <constraint firstItem="3vZ-au-KTE" firstAttribute="leading" secondItem="wVc-2O-XDX" secondAttribute="trailing" constant="8" id="QTl-ob-CZQ"/>
                             <constraint firstItem="U3B-9x-lEc" firstAttribute="trailing" secondItem="FHX-73-3GL" secondAttribute="trailing" id="Viy-s4-MWw"/>
-                            <constraint firstItem="whG-tm-ifj" firstAttribute="top" secondItem="3vZ-au-KTE" secondAttribute="bottom" constant="56" id="drx-NP-Ct5"/>
+                            <constraint firstItem="whG-tm-ifj" firstAttribute="centerY" secondItem="LqW-Dv-U8d" secondAttribute="centerY" id="XdL-IK-eEa"/>
                             <constraint firstItem="3vZ-au-KTE" firstAttribute="leading" secondItem="wVc-2O-XDX" secondAttribute="trailing" constant="8" id="fAA-LU-nvV"/>
                             <constraint firstItem="U3B-9x-lEc" firstAttribute="top" secondItem="FHX-73-3GL" secondAttribute="top" id="fLD-BH-PiW"/>
                             <constraint firstItem="U3B-9x-lEc" firstAttribute="leading" secondItem="FHX-73-3GL" secondAttribute="leading" id="fXK-Ce-cCr"/>
                             <constraint firstItem="FHX-73-3GL" firstAttribute="trailing" secondItem="3vZ-au-KTE" secondAttribute="trailing" constant="10" id="gbk-Gk-V1A"/>
-                            <constraint firstItem="FHX-73-3GL" firstAttribute="trailing" secondItem="whG-tm-ifj" secondAttribute="trailing" id="hjB-Vj-zpW"/>
                             <constraint firstItem="8i8-op-l7y" firstAttribute="top" secondItem="wVc-2O-XDX" secondAttribute="bottom" constant="7" id="roX-Ya-ckF"/>
                             <constraint firstItem="FHX-73-3GL" firstAttribute="bottom" secondItem="8i8-op-l7y" secondAttribute="bottom" constant="11" id="v96-el-niZ"/>
                             <constraint firstItem="FHX-73-3GL" firstAttribute="trailing" secondItem="3vZ-au-KTE" secondAttribute="trailing" constant="10" id="wOK-BU-sku"/>
-                            <constraint firstItem="whG-tm-ifj" firstAttribute="leading" secondItem="FHX-73-3GL" secondAttribute="leading" id="xyy-2d-fhz"/>
                             <constraint firstItem="wVc-2O-XDX" firstAttribute="top" secondItem="U3B-9x-lEc" secondAttribute="bottom" constant="10" id="yFG-SN-GkP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FHX-73-3GL"/>
@@ -445,7 +448,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="2jQ-nK-YiC"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="whG-tm-ifj" id="n6B-5n-COO"/>
+                        <outlet property="activityIndicatorView" destination="whG-tm-ifj" id="vGd-fL-uBL"/>
                         <outlet property="ingredientsTableView" destination="wVc-2O-XDX" id="S4x-7g-tuN"/>
                         <outlet property="ingredientsTextField" destination="LCS-UK-dHy" id="jwg-Z4-7rA"/>
                         <segue destination="PH4-Td-gWa" kind="show" identifier="segueToRecipList" id="ckx-JE-bZU"/>
@@ -454,7 +457,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chg-kz-U24" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4Ak-0k-SuB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-451" y="-1564"/>
+            <point key="canvasLocation" x="-452" y="-1564"/>
         </scene>
         <!--List Recipe View Controller-->
         <scene sceneID="Fnv-1Y-2yX">
@@ -545,9 +548,9 @@
                                                     <viewLayoutGuide key="safeArea" id="MxN-rb-cMZ"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-bZ-rjw">
-                                                    <rect key="frame" x="20" y="90.333333333333329" width="374" height="24"/>
+                                                    <rect key="frame" x="20" y="92.666666666666671" width="374" height="21.666666666666671"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

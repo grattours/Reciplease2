@@ -123,7 +123,6 @@ class RecipeService {
     
     // search data with endpoint and id
     func getRecipDetail(id: String, callback: @escaping(Bool, RecipeDetail?) -> Void) {
-        print("getRecipDetail")
         guard let url = URL(string: createRecipeDetailRequest(id: id)) else {
             print("error url getRecipDetail")
             return }

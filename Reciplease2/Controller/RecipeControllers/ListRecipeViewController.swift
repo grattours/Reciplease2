@@ -11,7 +11,6 @@ import UIKit
 
 class ListRecipeViewController: UIViewController {
     
-    //@IBOutlet weak var backRecipesTableView: UITableView!
     @IBOutlet weak var recipsTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -54,6 +53,7 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
         recipe = self.recipsList[indexPath.row]
         let id = self.recipsList[indexPath.row].id
         getRecipsDetail(id: id)
@@ -66,6 +66,7 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.recipeDetailList = [recipeDetail]
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "segueToDetail", sender: self)
+                    self.activityIndicatorView.stopAnimating()
                     self.activityIndicatorView.isHidden = true
                 }
             } else {

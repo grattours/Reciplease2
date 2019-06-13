@@ -33,7 +33,6 @@ class RecipeTableViewCell: UITableViewCell {
             nameLabel.text = recipe.recipeName
             ingredientsLabel.text = recipe.ingredients.joined(separator: " ")
             //recipeImageView.image = UIImage(named: "chef")
-            print("didset")
             let urlImage = recipe.smallImageUrls[0]
             //let urlImage = recipe.imageUrlsBySize.the90
             let urlImage2 = urlImage.replacingOccurrences(of: "=s90", with: "=s200")

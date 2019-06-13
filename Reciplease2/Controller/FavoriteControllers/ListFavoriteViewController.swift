@@ -52,7 +52,6 @@ extension ListFavoriteViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let number = favoritesRecipes?.count else { return 0 }
-        print(favoritesRecipes.count)
         return number
     }
     
@@ -70,6 +69,42 @@ extension ListFavoriteViewController: UITableViewDelegate, UITableViewDataSource
 //        self.activityIndicator.isHidden = true
         recipFavoriteSelected = favoritesRecipes[indexPath.row]
         performSegue(withIdentifier: "segueToDetailFavorite", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
+           
+            self.recipFavoriteSelected = self.favoritesRecipes[indexPath.row]
+            guard let id = self.recipFavoriteSelected?.id else {
+                self.presentAlert(message: .errorIdNoValid)
+                return }
+            if !self.recipeService.deleteRecipe(id) {
+                self.presentAlert(message: .errorNoDelete)
+            }
+             self.favoritesRecipes.remove(at: indexPath.row)
+             //tableView.reloadData()
+            self.favoritesListTabview.reloadData()
+            self.navigationItem.title = "🥕🍆  \(self.favoritesRecipes.count) FAVORITES  🍆🥕"
+        })
+        
+        return [deleteAction]
+    }
+    
+    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            favoritesRecipes.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+    }
+    
+    // animation
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1.0)
+        UIView.animate(withDuration: 0.5, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
+        }, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

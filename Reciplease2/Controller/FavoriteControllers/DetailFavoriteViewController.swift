@@ -43,6 +43,14 @@ class DetailFavoriteViewController: UIViewController {
         rejectFromFavorite()
         navigationController?.popViewController(animated: true)
     }
+     // let urlString = recipSelected?.source
+    @IBAction func shareButton(_ sender: Any) {
+        guard let url = recipSelected?.source else { return }
+        let message = "if you are hungry, you will have to go shopping ..."
+        let items: [Any] = [message, url]
+        let activity = UIActivityViewController(activityItems: items , applicationActivities: nil )
+        present(activity,animated: true, completion: nil)
+    }
     
     // something to do in Viewdidload
     private func setup() {

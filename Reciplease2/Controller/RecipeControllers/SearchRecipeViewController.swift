@@ -17,6 +17,7 @@ class SearchRecipeViewController: UIViewController {
     var recipeService = RecipeService()
     var ingredientsList : [String] = []
     var recipeList = [Infos]()
+//    private var activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,11 @@ class SearchRecipeViewController: UIViewController {
     
     // search recipers
     @IBAction func searchRecipes(_ sender: Any) {
-        if ingredientsList != [] {
+        // addActivityIndicatorView()
+        if ingredientsList != [] {        
             activityIndicatorView.isHidden = false
             setupRecipesListData(ingredientsList)
+            // self.removeActivityIndicatorView()
         } else {
             self.presentAlert(message: .errorIngredientneeded)
         }
@@ -61,9 +64,9 @@ class SearchRecipeViewController: UIViewController {
         ingredientsTableView.reloadData()
         activityIndicatorView.isHidden = true
         // locate database on Mac with Simulator for  DB Browser
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
-        print(filePath ?? "pas de path")
+        // print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        // let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
+        // print(filePath ?? "pas de path")
     }
     
     // search data from the API
@@ -86,6 +89,17 @@ class SearchRecipeViewController: UIViewController {
         }
         
     }
+    
+//    private func addActivityIndicatorView() {
+//        activityIndicatorView.center = view.center
+//        view.addSubview(activityIndicatorView)
+//        activityIndicatorView.startAnimating()
+//    }
+//
+//    private func removeActivityIndicatorView() {
+//        activityIndicatorView.stopAnimating()
+//        activityIndicatorView.removeFromSuperview()
+//    }
     
     // prepare transition to listControlleur
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

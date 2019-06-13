@@ -88,7 +88,6 @@ class DetailRecipeViewController: UIViewController {
     func rejectFromFavorite() {
         if !recipService.deleteRecipe(recipeDetail.id) {
             self.presentAlert(message: .errorNoDelete)
-            
         }
     }
     
