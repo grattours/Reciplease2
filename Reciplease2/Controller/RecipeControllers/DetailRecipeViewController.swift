@@ -66,7 +66,7 @@ class DetailRecipeViewController: UIViewController {
         let minutes = Int(time) / 60 % 60
         recipeDetailTimeLabel.text = String(format: "%01i:%02i", hours, minutes)
         recipeDetailRatingLabel.text = String(recipeDetailList[0].rating) + "k"
-        guard let urlImage = recipeDetailList[0].images[0].hostedLargeUrl else { return }
+        guard let urlImage = recipeDetailList[0].images[0]?.hostedLargeUrl else { return }
         recipeDetailImageView.downloaded(from: urlImage)
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.littleView.bounds

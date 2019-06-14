@@ -14,17 +14,17 @@ import CoreData
 
 class RecipeService {
     
-    //    var managedObjectContext: NSManagedObjectContext!
-//    let ApiKeyRequest = valueForAPIKey(named:"API_Key_Yummly")
-//    let ApiIdRequest = valueForAPIKey(named:"API_Id_Yummly")
-    let ApiKeyRequest = valueForAPIKey(named:"API_Key_Yummly")
-    let ApiIdRequest = valueForAPIKey(named:"API_Id_Yummly")
     let managedObjectContext: NSManagedObjectContext
     let coreDataStack: CoreDataStack
-    
+
     init() {
         self.managedObjectContext = AppDelegate.coreDataStack.mainContext
         self.coreDataStack = AppDelegate.coreDataStack
+    }
+    
+    init(managedObjectContext: NSManagedObjectContext, coreDataStack: CoreDataStack) {
+        self.managedObjectContext = managedObjectContext
+        self.coreDataStack = coreDataStack
     }
     
     var all: [Recipe] {
@@ -32,6 +32,9 @@ class RecipeService {
         guard let recipes = try? managedObjectContext.fetch(request) else {return []}
         return recipes
     }
+    
+    let ApiKeyRequest = valueForAPIKey(named:"API_Key_Yummly")
+    let ApiIdRequest = valueForAPIKey(named:"API_Id_Yummly")
     
     // compose url with ingredients list
     func createRecipeRequest(_ list:String) -> String {
@@ -56,7 +59,7 @@ class RecipeService {
         recipeSave.time = String(format: "%01i:%02i", hours, minutes) // plus qu'a afficher
         recipeSave.rate = recipeToSave.rating.description + "k"
         recipeSave.source = recipeToSave.source.sourceRecipeUrl?.description ?? "https://www.yummly.com/"
-        guard let urlImage = recipeToSave.images[0].hostedLargeUrl else { return }
+        guard let urlImage = recipeToSave.images[0]?.hostedLargeUrl else { return }
         recipeSave.image = urlImage.absoluteString.urlImagetoDataImage as NSData? as Data?
         // context save
         coreDataStack.saveContext(managedObjectContext)
@@ -117,9 +120,9 @@ class RecipeService {
         return URLString
     }
     
-    func getFavoriteDetails(id: String) {
-        print(" est ce bien nécessaire ?")
-    }
+//    func getFavoriteDetails(id: String) {
+//        print(" est ce bien nécessaire ?")
+//    }
     
     // search data with endpoint and id
     func getRecipDetail(id: String, callback: @escaping(Bool, RecipeDetail?) -> Void) {
