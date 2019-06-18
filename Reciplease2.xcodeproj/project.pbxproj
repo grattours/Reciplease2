@@ -303,9 +303,9 @@
 		FCE30A4622B909FD005F7CA3 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				FCE30A4422B909E3005F7CA3 /* NetProtocole.swift */,
 				FCE30A4722B90C17005F7CA3 /* NetSession.swift */,
 				FCE30A4922B920A7005F7CA3 /* NetService.swift */,
-				FCE30A4422B909E3005F7CA3 /* NetProtocole.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
