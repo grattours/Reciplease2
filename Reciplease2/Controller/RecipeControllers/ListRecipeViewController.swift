@@ -14,7 +14,9 @@ class ListRecipeViewController: UIViewController {
     @IBOutlet weak var recipsTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    private let recipeService = RecipeService()
+    // private let recipeService = RecipeService()
+    private let netService = NetService()
+    
     var recipsList = [Infos]()
     var recipeDetailList = [RecipeDetail]()
     var recipe: Infos?
@@ -60,7 +62,7 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     private func getRecipsDetail(id: String) {
-        recipeService.getRecipDetail(id: id) { (success, recipDetailData) in
+        netService.getRecipDetail(id: id) { (success, recipDetailData) in
             if success {
                 guard let recipeDetail = recipDetailData else { return }
                 self.recipeDetailList = [recipeDetail]

@@ -14,7 +14,7 @@ class SearchRecipeViewController: UIViewController {
     @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    var recipeService = RecipeService()
+    private var netService = NetService()
     var ingredientsList : [String] = []
     var recipeList = [Infos]()
 //    private var activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
@@ -71,7 +71,7 @@ class SearchRecipeViewController: UIViewController {
     
     // search data from the API
     private func setupRecipesListData(_ ingredientsList: [String]) {
-        recipeService.getRecipes(ingredientsList) { (success, recipeStruc) in
+        netService.getRecipes(ingredientsList) { (success, recipeStruc) in
             guard let nb = recipeStruc?.matches.count else {
                 return }
             

@@ -35,6 +35,9 @@
 		FC6D051E22B1185200F6A80D /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D051D22B1185200F6A80D /* RecipeTableViewCell.swift */; };
 		FCD51FF522B3768100F089B2 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD51FF422B3768100F089B2 /* TestCoreDataStack.swift */; };
 		FCD51FF722B3871000F089B2 /* RecipeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD51FF622B3871000F089B2 /* RecipeServiceTest.swift */; };
+		FCE30A4522B909E3005F7CA3 /* NetProtocole.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4422B909E3005F7CA3 /* NetProtocole.swift */; };
+		FCE30A4822B90C17005F7CA3 /* NetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4722B90C17005F7CA3 /* NetSession.swift */; };
+		FCE30A4A22B920A7005F7CA3 /* NetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4922B920A7005F7CA3 /* NetService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,9 @@
 		FC6D051D22B1185200F6A80D /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		FCD51FF422B3768100F089B2 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		FCD51FF622B3871000F089B2 /* RecipeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServiceTest.swift; sourceTree = "<group>"; };
+		FCE30A4422B909E3005F7CA3 /* NetProtocole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetProtocole.swift; sourceTree = "<group>"; };
+		FCE30A4722B90C17005F7CA3 /* NetSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetSession.swift; path = "/Users/lucderosne/Desktop/OPENCLASSROOM/PROJET 10 CRÉEZ L’APPLICATION RECIPLEASE… POUR DE BONS PETITS PLATS ! /Reciplease2/Reciplease2/Model/Net/NetSession.swift"; sourceTree = "<absolute>"; };
+		FCE30A4922B920A7005F7CA3 /* NetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,10 +232,11 @@
 		FC6D04CE22B0D18800F6A80D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC62B6DC22B1566E00921AF1 /* RecipeService.swift */,
+				FCE30A4622B909FD005F7CA3 /* Net */,
 				FC6D04DA22B0D7D000F6A80D /* CoreData */,
 				FC62B6D222B1516B00921AF1 /* RecipeJson.swift */,
 				FC3AC76022B3732A0059F610 /* RecipeJsonDetails.swift */,
-				FC62B6DC22B1566E00921AF1 /* RecipeService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +298,16 @@
 				FC62B6E222B1583700921AF1 /* ListRecipeViewController.swift */,
 			);
 			path = RecipeControllers;
+			sourceTree = "<group>";
+		};
+		FCE30A4622B909FD005F7CA3 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				FCE30A4722B90C17005F7CA3 /* NetSession.swift */,
+				FCE30A4922B920A7005F7CA3 /* NetService.swift */,
+				FCE30A4422B909E3005F7CA3 /* NetProtocole.swift */,
+			);
+			path = Net;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +524,7 @@
 			files = (
 				FC62B6E322B1583700921AF1 /* ListRecipeViewController.swift in Sources */,
 				FC62B6DF22B157C500921AF1 /* SearchRecipeViewController.swift in Sources */,
+				FCE30A4522B909E3005F7CA3 /* NetProtocole.swift in Sources */,
 				FC6D051E22B1185200F6A80D /* RecipeTableViewCell.swift in Sources */,
 				FC62B6E722B1589900921AF1 /* ListFavoriteViewController.swift in Sources */,
 				FC62B6E122B1580B00921AF1 /* DetailRecipeViewController.swift in Sources */,
@@ -516,10 +534,12 @@
 				FC62B6DD22B1566E00921AF1 /* RecipeService.swift in Sources */,
 				FC62B6D122B150E800921AF1 /* ApiKeys.swift in Sources */,
 				FC3AC76122B3732A0059F610 /* RecipeJsonDetails.swift in Sources */,
+				FCE30A4A22B920A7005F7CA3 /* NetService.swift in Sources */,
 				FC62B6E522B1586B00921AF1 /* DetailFavoriteViewController.swift in Sources */,
 				FC6D051522B0FFB500F6A80D /* FavoriteTableViewCell.swift in Sources */,
 				FC62B6E922B158E900921AF1 /* Extensions.swift in Sources */,
 				FC6D04E822B0DF7300F6A80D /* CoreDataStack.swift in Sources */,
+				FCE30A4822B90C17005F7CA3 /* NetSession.swift in Sources */,
 				FC16236022B0C6C200CC6234 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
