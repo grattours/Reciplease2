@@ -9,38 +9,38 @@
 import Foundation
 import Alamofire
 
-class NetService {
-    private let netSession: NetProtocol
+class NetYService {
+    private let netYSession: NetYSession
     
-    init(netSession: NetProtocol = NetSession()) {
-        self.netSession = netSession
+    init(netYSession: NetYSession = NetYSession()) {
+        self.netYSession = netYSession
     }
     
     let ApiKeyRequest = valueForAPIKey(named:"API_Key_Yummly")
     let ApiIdRequest = valueForAPIKey(named:"API_Id_Yummly")
     
     // search data with endpoint and ingredient list
-    func getRecipes(_ ingredientsList:[String], callback: @escaping(Bool, RecipeStruc?) -> Void) {
+    func getRecipes(_ ingredientsList:[String], callback: @escaping(Bool, RecipeStruc?, String?) -> Void) {
         var list = ""
         for ingredient in ingredientsList {
             list +=  ingredient + "+"
         }
         list = String(list.dropLast())
         guard let url = URL(string: createRecipeRequest(list)) else { return }
-        netSession.request(url: url) { responseData in
+        netYSession.request(url: url) { responseData in
             guard responseData.response?.statusCode == 200 else {
-                callback(false, nil)
+                callback(false, nil, "Error Server response")
                 return
             }
             guard let data = responseData.data else {
-                callback(false, nil)
+                callback(false, nil, "error no data")
                 return
             }
             guard let responseJson = try? JSONDecoder().decode(RecipeStruc.self, from: data) else {
-                callback(false, nil)
+                callback(false, nil,  "error json parsing")
                 return
             }
-            callback(true, responseJson)
+            callback(true, responseJson, nil)
         }
     }
     
@@ -58,24 +58,24 @@ class NetService {
     }
     
     // search data with endpoint and id
-    func getRecipDetail(id: String, callback: @escaping(Bool, RecipeDetail?) -> Void) {
+    func getRecipDetail(id: String, callback: @escaping(Bool, RecipeDetail?, String?) -> Void) {
         guard let url = URL(string: createRecipeDetailRequest(id: id)) else {
             print("error url getRecipDetail")
             return }
-        netSession.request(url: url) { responseData in
+        netYSession.request(url: url) { responseData in
             guard responseData.response?.statusCode == 200 else {
-                callback(false, nil)
+                callback(false, nil, "error server response")
                 return
             }
             guard let data = responseData.data else {
-                callback(false, nil)
+                callback(false, nil, "error no data")
                 return
             }
             guard let responseJson = try? JSONDecoder().decode(RecipeDetail.self, from: data) else {
-                callback(false, nil)
+                callback(false, nil, "error Json parsing")
                 return
             }
-            callback(true, responseJson)
+            callback(true, responseJson, nil)
             
         }
     }

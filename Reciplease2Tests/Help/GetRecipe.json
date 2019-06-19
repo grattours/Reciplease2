@@ -1,0 +1,438 @@
+{
+    "criteria": {
+        "q": "zucchini spinach tomatoes peppers basilic\n",
+        "requirePictures": true,
+        "allowedIngredient": null,
+        "excludedIngredient": null
+    },
+    "matches": [
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/1QO9fIW_Mm2G5ldXJ0ydAnPRZnWRDNzGz627Fvtiqu70GyMFVolkN1zEIZC3x9lWIK3Howgk8fvaGaZzC-5gSA=s90-c"
+            },
+            "sourceDisplayName": "Life is but a Dish",
+            "ingredients": [
+                "fusilli pasta",
+                "olive oil",
+                "onion",
+                "medium zucchini",
+                "garlic cloves",
+                "cherry tomatoes",
+                "spinach",
+                "lemon zest",
+                "fresh lemon juice",
+                "salt",
+                "pepper",
+                "toasted pine nuts",
+                "burrata cheese",
+                "basil"
+            ],
+            "id": "Simple-Lemon-Fusilli-with-Zucchini_-Tomatoes_-_-Spinach-1726024",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/RKaitg7oKnt_Jjb43qwA6krB7p1yDz_pCIwgHnVoOzSOa4AhiV4Bw9ycV-iXqcglwJGLyzLCQzZuVFUJEKeb=s90"
+            ],
+            "recipeName": "Simple Lemon Fusilli with Zucchini, Tomatoes, & Spinach",
+            "totalTimeInSeconds": 1800,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.5,
+                "bitter": 0.6666666666666666,
+                "sweet": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "salty": 0.5
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/lODMsx4q3OjzpurBgodMgIdPWWv3bX9a5vk51vFr5cESQ-tEYWbqZ_PaKA26Zh1ET8sAdE5q3w7_vEFLhuydEg=s90-c"
+            },
+            "sourceDisplayName": "AlkaMind",
+            "ingredients": [
+                "zucchinis",
+                "baby spinach",
+                "basil",
+                "garlic cloves",
+                "lemon",
+                "cashews",
+                "extra-virgin olive oil",
+                "cherry tomatoes",
+                "salt",
+                "pepper"
+            ],
+            "id": "Zucchini-Pasta-with-Spinach-Lemon-Pesto-2549796",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/rmgel2Y5GCzVXToRuR5KjiOs7NnLXXI7ZeNPjX5k2Nt7Ff_dSylMqcHmiDowgX1VYazLXK_krpdm42CQhZ6kTQ=s90"
+            ],
+            "recipeName": "Zucchini Pasta with Spinach Lemon Pesto",
+            "totalTimeInSeconds": 1200,
+            "attributes": {
+                "holiday": [
+                    "Summer"
+                ]
+            },
+            "flavors": {
+                "bitter": 0.16666666666666666,
+                "meaty": 0.16666666666666666,
+                "piquant": 0,
+                "salty": 0.16666666666666666,
+                "sour": 0.8333333333333334,
+                "sweet": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/xYMC6tXDuQgRCQYWyX6LiQhYNiucO2_NPszK01FrYGXafV2OJ4oXMwB8h39P1ev-3MkvkWRa0VWmPQFeCC8guA=s90-c"
+            },
+            "sourceDisplayName": "Wine Lady Cooks",
+            "ingredients": [
+                "skinless chicken breasts",
+                "zucchini",
+                "tomatoes",
+                "fresh spinach leaves",
+                "swiss cheese",
+                "garlic",
+                "spinach leaves",
+                "oregano",
+                "basil",
+                "olive oil",
+                "lemon juice",
+                "salt",
+                "pepper"
+            ],
+            "id": "Zucchini-Spinach-Tomato-Stuffed-Hasselback-Chicken-Air-Fryer-2262748",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/pGC5oJgptvF4eRyrwrBLBYJ8MJgekP0EzeheHe9XBvhNs3wmhWoBZmEQK7_X7vznY0O0R4-fzgqnsDyFOa5EKg=s90"
+            ],
+            "recipeName": "Zucchini Spinach Tomato Stuffed Hasselback Chicken Air Fryer",
+            "totalTimeInSeconds": 4200,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "bitter": 0.5,
+                "meaty": 0.3333333333333333,
+                "piquant": 0,
+                "salty": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "sweet": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/WhFHDGMdG7RHumL4S6uHbxfh9WIta5zjNBeU6pO5DmgNQsGFoDcp183y-lT-cVisuwJHaZuOAN0hLiyVQr5e=s90-c"
+            },
+            "sourceDisplayName": "Cook With Manali",
+            "ingredients": [
+                "zucchini",
+                "garlic cloves",
+                "spinach",
+                "red onion",
+                "chopped onion",
+                "low fat ricotta cheese",
+                "parmesan cheese",
+                "dried oregano",
+                "dried parsley",
+                "bertolli",
+                "shredded colby",
+                "salt",
+                "ground black pepper"
+            ],
+            "id": "Spinach-Zucchini-Lasagna-Rolls-1460954",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/BhxsWBrMlwjVIwPWvTovsCCz_76sb0eIXN4YEzO2CmRbJnMh4s3mEBj7NBLDYU7TTDMw9eeQlN7AtAbYRh0jHmY=s90"
+            ],
+            "recipeName": "Spinach Zucchini Lasagna Rolls",
+            "totalTimeInSeconds": 3000,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ],
+                "cuisine": [
+                    "Barbecue"
+                ]
+            },
+            "flavors": null,
+            "rating": 3
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh6.ggpht.com/kAyx5ammX0Nx7rAS95DPlvtgeapdzRtA5fKF6aavupfqQy-lLBKZJd_rNk-b6zbB4a8fpwhbboDtKIm9NOz2=s90-c"
+            },
+            "sourceDisplayName": "Primavera Kitchen",
+            "ingredients": [
+                "extra-virgin olive oil",
+                "onion",
+                "garlic cloves",
+                "tomato paste",
+                "crushed tomatoes",
+                "fresh tomatoes",
+                "salt",
+                "pepper",
+                "fresh basil",
+                "spinach",
+                "part skim ricotta",
+                "large egg",
+                "grated parmesan cheese",
+                "zucchini",
+                "mozzarella cheese"
+            ],
+            "id": "Spinach-and-Zucchini-Lasagna-682769",
+            "smallImageUrls": [
+                "https://lh6.ggpht.com/Yq7-QrjPQvaGDdR5uWEzrfoXdgcNE5qhMjtyX91P_OEDkZGrzFjYDL393Kjw5UiuevJK4wk8WOophjpEVWgZhyI=s90"
+            ],
+            "recipeName": "Spinach and Zucchini Lasagna",
+            "totalTimeInSeconds": 4500,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ],
+                "cuisine": [
+                    "Italian"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.16666666666666666,
+                "bitter": 0.5,
+                "sweet": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "salty": 0.3333333333333333
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/87-IZlc4o0mCgB-MR3bwEzc5YpjRre-Dh5S5ynNmJyXhmewibKLCF45AMMsgnfK--A1mK1IntpOd-4mWPWOB=s90-c"
+            },
+            "sourceDisplayName": "Life Made Sweeter",
+            "ingredients": [
+                "boneless skinless chicken thighs",
+                "fine sea salt",
+                "cracked black pepper",
+                "butter",
+                "garlic cloves",
+                "Italian seasoning",
+                "sun dried tomatoes",
+                "heavy cream",
+                "low sodium chicken broth",
+                "spinach",
+                "grated parmesan",
+                "chopped basil"
+            ],
+            "id": "Creamy-Sun-Dried-Tomato-Chicken-with-Spinach-and-Basil-2720810",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/_-J_V0rqRtZsjTIs32uHtL8q8GiK1M2wQNUZAX-fdIRPlvaTDsPgrX_M7uR89ZmRXC4WqXYx7duUhf6wry3v-dE=s90"
+            ],
+            "recipeName": "Creamy Sun-Dried Tomato Chicken with Spinach and Basil",
+            "totalTimeInSeconds": 2400,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": null,
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/n_5TAB2oFI3ITp7e8_cQl-BDM6sVlWIxY6JsSFDB8O17JHDLeRq2FONXoMnB63fOj6NBaNcuu1KyA1W_XQt8I5A=s90-c"
+            },
+            "sourceDisplayName": "Cooking without the Cow",
+            "ingredients": [
+                "onion",
+                "garlic",
+                "zucchini",
+                "fresh corn",
+                "basil",
+                "seasoned salt",
+                "tomato sauce",
+                "sweet red pepper",
+                "cheese",
+                "parsley",
+                "lemon juice",
+                "water",
+                "dill weed",
+                "oregano",
+                "black pepper",
+                "fresh spinach",
+                "white beans"
+            ],
+            "id": "Zucchini-Corn-Saute_-Spinach-and-Beans-1061658",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/lIWHBcGTv0qBo9r9uhsa3lUQEvNEYFbxN9_JRcJzcobFYQg_yY8t91-TCn8KuNWNxLfG8LgAfQDZBrd9hnq7xQ=s90"
+            ],
+            "recipeName": "Zucchini-Corn Sauté, Spinach and Beans",
+            "totalTimeInSeconds": 2100,
+            "attributes": {
+                "course": [
+                    "Main Dishes",
+                    "Side Dishes"
+                ]
+            },
+            "flavors": {
+                "bitter": 0.6666666666666666,
+                "meaty": 0.16666666666666666,
+                "piquant": 0.16666666666666666,
+                "salty": 0.16666666666666666,
+                "sour": 0.8333333333333334,
+                "sweet": 0.3333333333333333
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/7GOSwHw5avdMw_x2_DpJGiDqGjwUJbc6_raZaeOREQ9lQxyoYaLZADXP7X3muASbjelPULudOmac0l7DDnvh3w=s90-c"
+            },
+            "sourceDisplayName": "compelledtocook.com",
+            "ingredients": [
+                "olive oil",
+                "white onion",
+                "garlic",
+                "zucchini",
+                "chicken broth",
+                "frozen spinach",
+                "fresh oregano",
+                "white rice",
+                "kosher salt",
+                "black pepper",
+                "sour cream",
+                "medium tomato",
+                "fresh basil",
+                "chives",
+                "lime juiced",
+                "salt",
+                "pepper"
+            ],
+            "id": "Zucchini-Spinach-Bisque-2690132",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/6jLPdMTYCXFmIPWtEq2dz0DN0I7jmDnZkj3XO6oMMyzUXuo4Y0PtQ03mMXJ7QXJHWowlEND8mtRKojc1yc8=s90"
+            ],
+            "recipeName": "Zucchini Spinach Bisque",
+            "totalTimeInSeconds": 3900,
+            "attributes": {
+                "course": [
+                    "Soups"
+                ]
+            },
+            "flavors": {
+                "bitter": 0.16666666666666666,
+                "meaty": 0.16666666666666666,
+                "piquant": 0,
+                "salty": 0.3333333333333333,
+                "sour": 0.5,
+                "sweet": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/6AJhB9l_kWZX73L1g4bMtkB-XDYohoOWBsGxRTAMv8w0LhHc-vQyszKljl0YcFIaAWRzxmcYv8jKW2-rofHbew=s90-c"
+            },
+            "sourceDisplayName": "Rawmazing",
+            "ingredients": [
+                "zucchini",
+                "coconut",
+                "ground flax",
+                "fresh basil",
+                "Himalayan salt",
+                "ground pepper",
+                "black sesame seeds",
+                "macadamia nuts",
+                "water",
+                "garlic",
+                "spinach",
+                "lemon juice",
+                "pepper",
+                "carrots",
+                "cucumbers",
+                "avocados",
+                "tomatoes",
+                "jicama"
+            ],
+            "id": "Basil-Zucchini-Wraps-2115068",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/6vGsjhFfwNeZOxdByJH7IDsRm1FiId8DqfH9unFAPnAQpgUkTMkNw1Reu7F-GnrytYvm1fyMmEj-NVpnnvcjKA=s90"
+            ],
+            "recipeName": "Basil Zucchini Wraps",
+            "totalTimeInSeconds": 2100,
+            "attributes": {
+                "course": [
+                    "Lunch"
+                ]
+            },
+            "flavors": {
+                "bitter": 0.16666666666666666,
+                "meaty": 0.3333333333333333,
+                "piquant": 0.16666666666666666,
+                "salty": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "sweet": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/Fy6XB-JneoDWn0Gs1PJ3Gc1pySl5Ac-IwAUZKrdJWpx-V4YeOwwNttLx5DNdE-KYR2mfCkMj6pjPXtWP4D0ZNw=s90-c"
+            },
+            "sourceDisplayName": "Inspiralized",
+            "ingredients": [
+                "olive oil",
+                "garlic cloves",
+                "red pepper flakes",
+                "diced red onion",
+                "diced tomatoes",
+                "salt",
+                "oregano flakes",
+                "basil leaves",
+                "pepper",
+                "spinach",
+                "zucchinis",
+                "large egg",
+                "grated parmesan cheese",
+                "ricotta cheese",
+                "shredded mozzarella cheese"
+            ],
+            "id": "Spinach-Zucchini-Noodle-Lasagna-1875972",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/j-cPavjELOB4RuNGT9QLb2-1HpyRN-FiJkfqQoCj0r7UGT6NlvIwsjEusGAdht3E2zF6NRxT4hZUY5A7bbl8=s90"
+            ],
+            "recipeName": "Spinach Zucchini Noodle Lasagna",
+            "totalTimeInSeconds": 4500,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ],
+                "cuisine": [
+                    "Italian"
+                ]
+            },
+            "flavors": {
+                "piquant": 0.16666666666666666,
+                "meaty": 0.16666666666666666,
+                "bitter": 0.6666666666666666,
+                "sweet": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "salty": 0.5
+            },
+            "rating": 4
+        }
+    ],
+    "facetCounts": {},
+    "totalMatchCount": 565,
+    "attribution": {
+        "html": "Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='https://static.yummly.com/api-logo.png'/></a>",
+        "url": "http://www.yummly.com/recipes/",
+        "text": "Recipe search powered by Yummly",
+        "logo": "https://static.yummly.com/api-logo.png"
+    }
+}

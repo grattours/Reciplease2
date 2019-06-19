@@ -14,10 +14,9 @@ class SearchRecipeViewController: UIViewController {
     @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    private var netService = NetService()
+    private var netYService = NetYService()
     var ingredientsList : [String] = []
     var recipeList = [Infos]()
-//    private var activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +28,6 @@ class SearchRecipeViewController: UIViewController {
         guard let inputString = ingredientsTextField.text else { return }
         var cleanString = inputString.lowercased()
         cleanString = cleanString.trimmingCharacters(in: .whitespacesAndNewlines)
-        // faire une fonction cleanInputText() remplacer , par ""
-        // faire un popover d'instruction de saisie (Bonus ?)
         ingredientsList = cleanString.components(separatedBy: " ")
         ingredientsTableView.reloadData()
     }
@@ -44,11 +41,9 @@ class SearchRecipeViewController: UIViewController {
     
     // search recipers
     @IBAction func searchRecipes(_ sender: Any) {
-        // addActivityIndicatorView()
         if ingredientsList != [] {        
             activityIndicatorView.isHidden = false
             setupRecipesListData(ingredientsList)
-            // self.removeActivityIndicatorView()
         } else {
             self.presentAlert(message: .errorIngredientneeded)
         }
@@ -63,15 +58,11 @@ class SearchRecipeViewController: UIViewController {
         tabBar.unselectedItemTintColor = UIColor.white
         ingredientsTableView.reloadData()
         activityIndicatorView.isHidden = true
-        // locate database on Mac with Simulator for  DB Browser
-        // print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        // let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
-        // print(filePath ?? "pas de path")
     }
     
     // search data from the API
     private func setupRecipesListData(_ ingredientsList: [String]) {
-        netService.getRecipes(ingredientsList) { (success, recipeStruc) in
+        netYService.getRecipes(ingredientsList) { (success, recipeStruc, error) in
             guard let nb = recipeStruc?.matches.count else {
                 return }
             
@@ -89,17 +80,6 @@ class SearchRecipeViewController: UIViewController {
         }
         
     }
-    
-//    private func addActivityIndicatorView() {
-//        activityIndicatorView.center = view.center
-//        view.addSubview(activityIndicatorView)
-//        activityIndicatorView.startAnimating()
-//    }
-//
-//    private func removeActivityIndicatorView() {
-//        activityIndicatorView.stopAnimating()
-//        activityIndicatorView.removeFromSuperview()
-//    }
     
     // prepare transition to listControlleur
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

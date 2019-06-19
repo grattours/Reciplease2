@@ -9,6 +9,17 @@
 import Foundation
 import UIKit
 
+extension Int {
+    func intToStringMnSec() -> String {
+        //let time = recipeToSave.totalTimeInSeconds
+        let hours : Int = self / 3600
+        let minutes : Int = (self / 60) % 60
+        let timeString = String(format: "%01i:%02i", hours, minutes)
+        return timeString
+    }
+    
+}
+
 extension UIViewController {
     // same alerte with title and message as parameter
     func presentAlert(message: errorMessage) {

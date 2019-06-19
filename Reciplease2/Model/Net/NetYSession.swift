@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class NetSession: NetProtocol {
+class NetYSession: NetYProtocol {
     
     func request(url: URL, completionHandler: @escaping (DataResponse<Any>) -> Void) {
         Alamofire.request(url).responseJSON { responseData in

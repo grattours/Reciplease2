@@ -9,6 +9,6 @@
 import Foundation
 import Alamofire
 
-protocol NetProtocol {
+protocol NetYProtocol {
     func request(url: URL, completionHandler: @escaping (DataResponse<Any>) -> Void)
 }

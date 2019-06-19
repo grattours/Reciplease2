@@ -61,10 +61,7 @@ class DetailRecipeViewController: UIViewController {
         }
         recipeDetail = recipeDetailList[0]
         recipeDetailNameLabel.text = recipeDetailList[0].name
-        let time = recipeDetailList[0].totalTimeInSeconds
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        recipeDetailTimeLabel.text = String(format: "%01i:%02i", hours, minutes)
+        recipeDetailTimeLabel.text = recipeDetailList[0].totalTimeInSeconds.intToStringMnSec()
         recipeDetailRatingLabel.text = String(recipeDetailList[0].rating) + "k"
         guard let urlImage = recipeDetailList[0].images[0]?.hostedLargeUrl else { return }
         recipeDetailImageView.downloaded(from: urlImage)

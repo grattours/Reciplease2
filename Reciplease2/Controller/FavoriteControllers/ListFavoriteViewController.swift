@@ -11,7 +11,6 @@ import UIKit
 class ListFavoriteViewController: UIViewController {
     
     @IBOutlet weak var favoritesListTabview: UITableView!
-//    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var favoritesRecipes: [Recipe]!
     private var recipeService = RecipeService()
@@ -22,7 +21,6 @@ class ListFavoriteViewController: UIViewController {
         favoritesRecipes = recipeService.all
         favoritesListTabview.reloadData()
         self.navigationItem.title = "🥕🍆  \(favoritesRecipes.count) FAVORITES  🍆🥕"
- //       self.activityIndicator.isHidden = true
     }
     
     // delete all favorite with confirmation
@@ -66,7 +64,6 @@ extension ListFavoriteViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.activityIndicator.isHidden = true
         recipFavoriteSelected = favoritesRecipes[indexPath.row]
         performSegue(withIdentifier: "segueToDetailFavorite", sender: self)
     }
@@ -82,7 +79,6 @@ extension ListFavoriteViewController: UITableViewDelegate, UITableViewDataSource
                 self.presentAlert(message: .errorNoDelete)
             }
              self.favoritesRecipes.remove(at: indexPath.row)
-             //tableView.reloadData()
             self.favoritesListTabview.reloadData()
             self.navigationItem.title = "🥕🍆  \(self.favoritesRecipes.count) FAVORITES  🍆🥕"
         })

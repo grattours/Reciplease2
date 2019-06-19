@@ -1,6 +1,6 @@
 //
 //  RecipeJson.swift
-//  
+//
 //
 //  Created by Luc Derosne on 12/06/2019.
 //
