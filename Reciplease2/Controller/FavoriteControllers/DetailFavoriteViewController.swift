@@ -20,6 +20,7 @@ class DetailFavoriteViewController: UIViewController {
     @IBOutlet weak var littleView: UIView!
     
     private let recipService = RecipeService()
+    private var netYService = NetYService()
     
     var recipeList = [Recipe]()// all favorite
     var recipSelected: Recipe? // data one favorite

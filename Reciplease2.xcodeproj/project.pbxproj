@@ -16,7 +16,7 @@
 		FC16236D22B0C6C300CC6234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC16236B22B0C6C300CC6234 /* LaunchScreen.storyboard */; };
 		FC3AC76122B3732A0059F610 /* RecipeJsonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AC76022B3732A0059F610 /* RecipeJsonDetails.swift */; };
 		FC548F1222BA3478004C6B49 /* NetYServiceDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548F1122BA3478004C6B49 /* NetYServiceDetailTests.swift */; };
-		FC548F1422BA61DD004C6B49 /* RecipeServiceTestU.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548F1322BA61DD004C6B49 /* RecipeServiceTestU.swift */; };
+		FC55DE3C22BCD140006C5E43 /* NetSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC55DE3B22BCD140006C5E43 /* NetSessionFake.swift */; };
 		FC62B6D122B150E800921AF1 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62B6D022B150E800921AF1 /* ApiKeys.swift */; };
 		FC62B6D722B154B700921AF1 /* AlertsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62B6D622B154B700921AF1 /* AlertsEnum.swift */; };
 		FC62B6DB22B155D900921AF1 /* SuperMario256.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC62B6DA22B155D900921AF1 /* SuperMario256.ttf */; };
@@ -31,6 +31,7 @@
 		FC6D04E822B0DF7300F6A80D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D04E722B0DF7300F6A80D /* CoreDataStack.swift */; };
 		FC6D051522B0FFB500F6A80D /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D051422B0FFB500F6A80D /* FavoriteTableViewCell.swift */; };
 		FC6D051E22B1185200F6A80D /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D051D22B1185200F6A80D /* RecipeTableViewCell.swift */; };
+		FC9BA32922BCD69D00D29D14 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9BA32822BCD69D00D29D14 /* ServiceTests.swift */; };
 		FCD51FF522B3768100F089B2 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD51FF422B3768100F089B2 /* TestCoreDataStack.swift */; };
 		FCD51FF722B3871000F089B2 /* RecipeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD51FF622B3871000F089B2 /* RecipeServiceTest.swift */; };
 		FCE30A4522B909E3005F7CA3 /* NetYProtocole.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4422B909E3005F7CA3 /* NetYProtocole.swift */; };
@@ -38,7 +39,6 @@
 		FCE30A4A22B920A7005F7CA3 /* NetYService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4922B920A7005F7CA3 /* NetYService.swift */; };
 		FCE30A4C22B93D04005F7CA3 /* FakeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4B22B93D04005F7CA3 /* FakeResponse.swift */; };
 		FCE30A4E22B93EF8005F7CA3 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4D22B93EF8005F7CA3 /* FakeResponseData.swift */; };
-		FCE30A5122B94032005F7CA3 /* NetSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4F22B93FA3005F7CA3 /* NetSessionFake.swift */; };
 		FCE30A5522B9415A005F7CA3 /* GetRecipe.json in Resources */ = {isa = PBXBuildFile; fileRef = FCE30A5422B9415A005F7CA3 /* GetRecipe.json */; };
 		FCE30A5722B941CF005F7CA3 /* GetDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = FCE30A5622B941CF005F7CA3 /* GetDetail.json */; };
 		FCE30A5A22B94505005F7CA3 /* NetYServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A5922B94505005F7CA3 /* NetYServiceTests.swift */; };
@@ -76,7 +76,7 @@
 		FC16237922B0C6C400CC6234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3AC76022B3732A0059F610 /* RecipeJsonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeJsonDetails.swift; sourceTree = "<group>"; };
 		FC548F1122BA3478004C6B49 /* NetYServiceDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetYServiceDetailTests.swift; sourceTree = "<group>"; };
-		FC548F1322BA61DD004C6B49 /* RecipeServiceTestU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServiceTestU.swift; sourceTree = "<group>"; };
+		FC55DE3B22BCD140006C5E43 /* NetSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetSessionFake.swift; sourceTree = "<group>"; };
 		FC62B6D022B150E800921AF1 /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		FC62B6D622B154B700921AF1 /* AlertsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsEnum.swift; sourceTree = "<group>"; };
 		FC62B6DA22B155D900921AF1 /* SuperMario256.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SuperMario256.ttf; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 		FC6D04FF22B0F64400F6A80D /* DetailsFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFavoriteView.swift; sourceTree = "<group>"; };
 		FC6D051422B0FFB500F6A80D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		FC6D051D22B1185200F6A80D /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		FC9BA32822BCD69D00D29D14 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceTests.swift; path = Reciplease2Tests/ServiceTests.swift; sourceTree = SOURCE_ROOT; };
 		FCD51FF422B3768100F089B2 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		FCD51FF622B3871000F089B2 /* RecipeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServiceTest.swift; sourceTree = "<group>"; };
 		FCE30A4422B909E3005F7CA3 /* NetYProtocole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetYProtocole.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		FCE30A4922B920A7005F7CA3 /* NetYService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetYService.swift; sourceTree = "<group>"; };
 		FCE30A4B22B93D04005F7CA3 /* FakeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponse.swift; sourceTree = "<group>"; };
 		FCE30A4D22B93EF8005F7CA3 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
-		FCE30A4F22B93FA3005F7CA3 /* NetSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetSessionFake.swift; path = Reciplease2Tests/Help/NetSessionFake.swift; sourceTree = SOURCE_ROOT; };
 		FCE30A5422B9415A005F7CA3 /* GetRecipe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetRecipe.json; sourceTree = "<group>"; };
 		FCE30A5622B941CF005F7CA3 /* GetDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetDetail.json; sourceTree = "<group>"; };
 		FCE30A5922B94505005F7CA3 /* NetYServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetYServiceTests.swift; sourceTree = "<group>"; };
@@ -184,12 +184,10 @@
 		FC16237622B0C6C400CC6234 /* Reciplease2Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FCF5A42122BB83AF0078B168 /* PersistenceTests */,
+				FCF5A42222BB83E20078B168 /* NeWorkTests */,
 				FCE30A5822B943F4005F7CA3 /* Help */,
 				FC16237922B0C6C400CC6234 /* Info.plist */,
-				FCD51FF622B3871000F089B2 /* RecipeServiceTest.swift */,
-				FCE30A5922B94505005F7CA3 /* NetYServiceTests.swift */,
-				FC548F1122BA3478004C6B49 /* NetYServiceDetailTests.swift */,
-				FC548F1322BA61DD004C6B49 /* RecipeServiceTestU.swift */,
 			);
 			path = Reciplease2Tests;
 			sourceTree = "<group>";
@@ -298,14 +296,32 @@
 		FCE30A5822B943F4005F7CA3 /* Help */ = {
 			isa = PBXGroup;
 			children = (
-				FCE30A4F22B93FA3005F7CA3 /* NetSessionFake.swift */,
-				FCE30A4D22B93EF8005F7CA3 /* FakeResponseData.swift */,
-				FCE30A5622B941CF005F7CA3 /* GetDetail.json */,
-				FCE30A5422B9415A005F7CA3 /* GetRecipe.json */,
-				FCE30A4B22B93D04005F7CA3 /* FakeResponse.swift */,
-				FCD51FF422B3768100F089B2 /* TestCoreDataStack.swift */,
 			);
 			path = Help;
+			sourceTree = "<group>";
+		};
+		FCF5A42122BB83AF0078B168 /* PersistenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCD51FF622B3871000F089B2 /* RecipeServiceTest.swift */,
+				FCD51FF422B3768100F089B2 /* TestCoreDataStack.swift */,
+			);
+			path = PersistenceTests;
+			sourceTree = "<group>";
+		};
+		FCF5A42222BB83E20078B168 /* NeWorkTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCE30A5922B94505005F7CA3 /* NetYServiceTests.swift */,
+				FC548F1122BA3478004C6B49 /* NetYServiceDetailTests.swift */,
+				FCE30A5622B941CF005F7CA3 /* GetDetail.json */,
+				FCE30A5422B9415A005F7CA3 /* GetRecipe.json */,
+				FCE30A4D22B93EF8005F7CA3 /* FakeResponseData.swift */,
+				FCE30A4B22B93D04005F7CA3 /* FakeResponse.swift */,
+				FC55DE3B22BCD140006C5E43 /* NetSessionFake.swift */,
+				FC9BA32822BCD69D00D29D14 /* ServiceTests.swift */,
+			);
+			path = NeWorkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,13 +516,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE30A5A22B94505005F7CA3 /* NetYServiceTests.swift in Sources */,
-				FC548F1422BA61DD004C6B49 /* RecipeServiceTestU.swift in Sources */,
+				FC9BA32922BCD69D00D29D14 /* ServiceTests.swift in Sources */,
 				FCD51FF722B3871000F089B2 /* RecipeServiceTest.swift in Sources */,
 				FCE30A4E22B93EF8005F7CA3 /* FakeResponseData.swift in Sources */,
 				FCD51FF522B3768100F089B2 /* TestCoreDataStack.swift in Sources */,
 				FCE30A4C22B93D04005F7CA3 /* FakeResponse.swift in Sources */,
+				FC55DE3C22BCD140006C5E43 /* NetSessionFake.swift in Sources */,
 				FC548F1222BA3478004C6B49 /* NetYServiceDetailTests.swift in Sources */,
-				FCE30A5122B94032005F7CA3 /* NetSessionFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

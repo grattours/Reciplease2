@@ -18,12 +18,11 @@ class TestCoreDataStack: CoreDataStack {
     }
     override init(modelName: String) {
         super.init(modelName: modelName)
-        let persistentStoreDescription =
-            NSPersistentStoreDescription()
-        persistentStoreDescription.type = NSInMemoryStoreType
+        let persistentStoreDescription =  NSPersistentStoreDescription()
+        //persistentStoreDescription.type = NSInMemoryStoreType // incompatible avec NSBatchDeleteRequest
+        persistentStoreDescription.url = URL(fileURLWithPath: "/dev/null")
         let container = NSPersistentContainer(name: modelName)
-        container.persistentStoreDescriptions =
-            [persistentStoreDescription]
+        container.persistentStoreDescriptions = [persistentStoreDescription]
         container.loadPersistentStores {
             (storeDescription, error) in
             if let error = error as NSError? {

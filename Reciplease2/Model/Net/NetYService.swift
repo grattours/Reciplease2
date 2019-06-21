@@ -26,6 +26,8 @@ class NetYService {
             list +=  ingredient + "+"
         }
         list = String(list.dropLast())
+        print("list")
+        print(list)
         guard let url = URL(string: createRecipeRequest(list)) else { return }
         netYSession.request(url: url) { responseData in
             guard responseData.response?.statusCode == 200 else {
@@ -60,7 +62,6 @@ class NetYService {
     // search data with endpoint and id
     func getRecipDetail(id: String, callback: @escaping(Bool, RecipeDetail?, String?) -> Void) {
         guard let url = URL(string: createRecipeDetailRequest(id: id)) else {
-            print("error url getRecipDetail")
             return }
         netYSession.request(url: url) { responseData in
             guard responseData.response?.statusCode == 200 else {

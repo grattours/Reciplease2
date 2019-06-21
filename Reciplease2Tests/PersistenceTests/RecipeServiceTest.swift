@@ -31,10 +31,26 @@ class RecipeServiceTest: XCTestCase {
     }
 
     override func tearDown() {
+        deleteAllDetailedRecipeDataTests()
         coreDataStack = nil
         recipeService = nil
+        super.tearDown()
     }
-
+    
+    private func deleteAllDetailedRecipeDataTests() {
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Recipe")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetch)
+        _ = try? coreDataStack.mainContext.execute(deleteRequest)
+    }
+    
+    func testSearchRecipesShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+        //Given
+        recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
+        recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
+        
+        //  let expectation = XCTestExpectation(description: "Wait for queue change.")
+    }
+    
     func testRootContextIsSavedAfterAddingFavorite() {
         let derivedContext = coreDataStack.newDerivedContext()
         recipeService = RecipeService(managedObjectContext: derivedContext,
@@ -55,8 +71,7 @@ class RecipeServiceTest: XCTestCase {
     }
     
     // test when id in the code and no data in the Base
-    func testGiven2RecipesAnd1BadIdWhenChackIfRecipeExistThenResultIsFalse() {
-        
+    func testGiven2RecipesAnd1BadIdWhenCheckIfRecipeExistThenResultIsFalse() {
         //Given
         recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
         recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
@@ -71,9 +86,23 @@ class RecipeServiceTest: XCTestCase {
         
     }
     
+    func testGiven2RecipesAnd1BadIdWhenCheckIfRecipeExistThenResultIsTrue() {
+        //Given
+        recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
+        recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
+        
+        let noId = "04"
+        
+        //When
+        let favoriteExist = recipeService.checkIfRecipeIsFavorite(id: noId)
+        
+        //Then
+        XCTAssertTrue(favoriteExist)
+        
+    }
+    
     // test if a favorite existe for a id
     func testGivenFavoriteStoredWhenCheckIfOneofThemExistThenResultIsTrue() {
-        
         //Given
         recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
         recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
@@ -89,7 +118,6 @@ class RecipeServiceTest: XCTestCase {
     }
     // test count favorites, when no favorites
     func testGiven0FavoriteWhenGetFavoriteThenCountEqual0() {
-        
         //Given
         
         //When
@@ -101,10 +129,10 @@ class RecipeServiceTest: XCTestCase {
     }
     
     // test erase one favorite when no data
-    func testGivenNoFavoriteWhenDeleteFavoriteThenError() {
-        
+    func testGivenOneFavoriteWhenDeleteFavoriteOK() {
         //Given
-        
+//        recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
+//        recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
         //When
         let IsDeleteOk = recipeService.deleteRecipe(recipeExample4.id)
         
@@ -113,4 +141,16 @@ class RecipeServiceTest: XCTestCase {
 
     }
 
+    // test erase one favorite when no data
+    func testGivenFavoriteWhenDeleteAllFavoriteThenOK() {
+        
+        //Given
+        
+        //When
+        let IsDeleteOk = recipeService.deleteAllFavorite()
+        
+        //Then
+        XCTAssertTrue(IsDeleteOk)
+        
+    }
 }
