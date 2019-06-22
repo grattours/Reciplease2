@@ -11,13 +11,12 @@ import Alamofire
 
 class NetYService {
     private let netYSession: NetYSession
+    var ApiIdRequest = ApiKeysManager().yummlyId
+    var ApiKeyRequest = ApiKeysManager().yummlyKey
     
     init(netYSession: NetYSession = NetYSession()) {
         self.netYSession = netYSession
     }
-    
-    let ApiKeyRequest = valueForAPIKey(named:"API_Key_Yummly")
-    let ApiIdRequest = valueForAPIKey(named:"API_Id_Yummly")
     
     // search data with endpoint and ingredient list
     func getRecipes(_ ingredientsList:[String], callback: @escaping(Bool, RecipeStruc?, String?) -> Void) {
@@ -80,5 +79,6 @@ class NetYService {
             
         }
     }
+
     
 }

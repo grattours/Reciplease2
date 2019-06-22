@@ -10,6 +10,7 @@
 import Foundation
 
 // All texts for alert messages
+// use case example : self.presentAlert(message: .errorIngredientneeded)
 enum errorMessage: String {
     // global  Error messages
     case networkError = "NetWork error"

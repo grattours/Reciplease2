@@ -11,7 +11,7 @@ import XCTest
 
 class NetYServiceDetailTests: XCTestCase {
     
-//15 OK Correct nil dataOK
+    //15 OK Correct nil dataOK
     func testGetDetailShouldSuccessCallbackIfNoErrorAndCorrectData() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.GetDetailCorrectData, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -30,7 +30,7 @@ class NetYServiceDetailTests: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-//16 OK Correct error
+    //16 OK Correct error
     func testGetDetailShouldSuccessCallbackIfResponseOKDataAndError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.GetDetailCorrectData, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -48,8 +48,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         wait(for: [expectation], timeout: 0.01)
     }
-
-//17 Onk nil nil
+    
+    //17 Onk nil nil
     func testGetDetailShouldFailedCallbackIfResponseCorrectAndNilData() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: nil, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -65,8 +65,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         wait(for: [expectation], timeout: 0.01)
     }
-
-//18 Ok nil error
+    
+    //18 Ok nil error
     func testGetDetailShouldFailedCallbackIfIncorrectData() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: nil, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -82,7 +82,7 @@ class NetYServiceDetailTests: XCTestCase {
         
         wait(for: [expectation], timeout: 0.01)
     }
-//19 OK incorrect nil
+    //19 OK incorrect nil
     func diseable_testGetDetailShouldFailedCallbackIfResponseOKIncorrectDataAndNoError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.incorrectData, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -98,8 +98,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         //wait(for: [expectation], timeout: 0.01)
     }
-
-//20 OK incorrect error
+    
+    //20 OK incorrect error
     func diseable_testGetDetailShouldFailedCallbackIfResponseOKIncorrectDataAndError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.incorrectData, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -115,8 +115,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         //wait(for: [expectation], timeout: 0.01)
     }
-
-//21 KO correct nil
+    
+    //21 KO correct nil
     func diseable_testGetDetailShouldFailedCallbackIfIncorrectResponse() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.GetDetailCorrectData, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -133,7 +133,7 @@ class NetYServiceDetailTests: XCTestCase {
         // wait(for: [expectation], timeout: 0.01)
     }
     
-//22 KO correct error
+    //22 KO correct error
     func diseable_testGetDetailShouldFailedCallbackIfNoResponseCorrectDataAndError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.GetDetailCorrectData, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -149,8 +149,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         // wait(for: [expectation], timeout: 0.01)
     }
-
-//23 KO nil nil
+    
+    //23 KO nil nil
     func diseable_testGetDetailShouldFailedCallbackIfResponseKONoDataAndNoError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: nil, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -166,8 +166,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         // wait(for: [expectation], timeout: 0.01)
     }
-
-//24 KO nil error
+    
+    //24 KO nil error
     func diseable_testGetDetailShouldFailedCallbackIfResponseKONoDataAndError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: nil, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -183,8 +183,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         // wait(for: [expectation], timeout: 0.01)
     }
-
-//25 KO incorrect nil
+    
+    //25 KO incorrect nil
     func diseable_testGetDetailShouldFailedCallbackResponseKODataIncorrectAndNoError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.incorrectData, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -201,7 +201,7 @@ class NetYServiceDetailTests: XCTestCase {
         //wait(for: [expectation], timeout: 0.01)
     }
     
-//26 KO incorrect error
+    //26 KO incorrect error
     func diseable_testGetDetailShouldFailedCallbackResponseKODataIncorrectAndError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.incorrectData, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -217,8 +217,8 @@ class NetYServiceDetailTests: XCTestCase {
         
         //wait(for: [expectation], timeout: 0.01)
     }
-
-//27 nil nil error
+    
+    //27 nil nil error
     func diseable_testGetDetailShouldFailedCallback() {
         let fakeResponse = FakeResponse(response: nil, data: nil, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -234,26 +234,26 @@ class NetYServiceDetailTests: XCTestCase {
         
         //wait(for: [expectation], timeout: 0.01)
     }
-
-//28 nil incorrect nil
+    
+    //28 nil incorrect nil
     func diseable_testGetDetailShouldFailedCallbackIfNoData() {
         let fakeResponse = FakeResponse(response: nil, data: FakeResponseData.incorrectData, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
         let netYService = NetYService(netYSession: netYSessionFake)
-
+        
         //let expectation = XCTestExpectation(description: "Wait for queue change.")
         netYService.getRecipDetail(id: "") { success, RecipeDetail, error in
             XCTAssertFalse(success)
             XCTAssertNil(RecipeDetail)
             XCTAssertNotNil(error)
-           // expectation.fulfill()
+            // expectation.fulfill()
         }
-
+        
         //wait(for: [expectation], timeout: 0.01)
     }
     
-
-
-
-
+    
+    
+    
+    
 }

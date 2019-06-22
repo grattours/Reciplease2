@@ -10,8 +10,6 @@ import Foundation
 import Alamofire
 import CoreData
 
-//import AlamofireImage
-
 class RecipeService {
     
     let managedObjectContext: NSManagedObjectContext
@@ -89,6 +87,7 @@ class RecipeService {
         }
         return count > 0
     }
+
     
 } // class
 

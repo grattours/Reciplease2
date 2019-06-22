@@ -12,7 +12,7 @@ class NetYSession: NetYProtocol {
     
     func request(url: URL, completionHandler: @escaping (DataResponse<Any>) -> Void) {
         Alamofire.request(url).responseJSON { responseData in
-                completionHandler(responseData)
+            completionHandler(responseData)
         }
     }
 }

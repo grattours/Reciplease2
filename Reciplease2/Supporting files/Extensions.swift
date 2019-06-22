@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// use case example : recipeSave.time = recipeToSave.totalTimeInSeconds.intToStringMnSec()
 extension Int {
     func intToStringMnSec() -> String {
         //let time = recipeToSave.totalTimeInSeconds
@@ -21,7 +22,7 @@ extension Int {
 }
 
 extension UIViewController {
-    // same alerte with title and message as parameter
+    // use case example : self.presentAlert(message: .errorIngredientneeded)
     func presentAlert(message: errorMessage) {
         let alertVC = UIAlertController(title: "Alerte", message: message.rawValue, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -30,6 +31,7 @@ extension UIViewController {
     
 }
 
+// use case example : recipeDetailImageView.downloaded(from: urlImage)
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
         contentMode = mode
@@ -53,7 +55,7 @@ extension UIImageView {
     
     
 }
-
+// use case example : recipeSave.image = urlImage.absoluteString.urlImagetoDataImage as NSData? as Data?
 extension String {
     var urlImagetoDataImage: Data? {
         get {

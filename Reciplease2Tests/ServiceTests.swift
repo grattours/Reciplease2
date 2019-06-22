@@ -11,7 +11,7 @@ import XCTest
 
 class ServiceTests: XCTestCase {
     
-//1
+    //1
     func testGetRecipeShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.GetRecipeCorrectData, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
@@ -27,90 +27,90 @@ class ServiceTests: XCTestCase {
             expectation.fulfill()
         }
         
-             wait(for: [expectation], timeout: 10)
+        wait(for: [expectation], timeout: 10)
     }
     
-//2
-        func testGetRecipeShouldFailedCallbackIfIncorrectResponse() {
-            let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.incorrectData, error: nil)
-            let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
-            let netYService = NetYService(netYSession: netYSessionFake)
-    
-            let expectation = XCTestExpectation(description: "Wait for queue change.")
-            netYService.getRecipes([""]) { success, RecipeStruc, error in
-                XCTAssertFalse(success)
-                XCTAssertNil(RecipeStruc)
-                XCTAssertNotNil(error)
-                expectation.fulfill()
-            }
-    
-            wait(for: [expectation], timeout: 0.01)
+    //2
+    func testGetRecipeShouldFailedCallbackIfIncorrectResponse() {
+        let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.incorrectData, error: nil)
+        let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
+        let netYService = NetYService(netYSession: netYSessionFake)
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        netYService.getRecipes([""]) { success, RecipeStruc, error in
+            XCTAssertFalse(success)
+            XCTAssertNil(RecipeStruc)
+            XCTAssertNotNil(error)
+            expectation.fulfill()
         }
-
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
+    
     //3
-        func testGetRecipeShouldPostFailedCallbackIfResponseCorrectAndNilData() {
-            let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: nil, error: nil)
-            let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
-            let netYService = NetYService(netYSession: netYSessionFake)
-    
-            let expectation = XCTestExpectation(description: "Wait for queue change.")
-            netYService.getRecipes([""]) { success, RecipeStruc, error in
-                XCTAssertFalse(success)
-                XCTAssertNil(RecipeStruc)
-                XCTAssertNotNil(error)
-                expectation.fulfill()
-            }
-    
-             wait(for: [expectation], timeout: 0.01)
+    func testGetRecipeShouldPostFailedCallbackIfResponseCorrectAndNilData() {
+        let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: nil, error: nil)
+        let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
+        let netYService = NetYService(netYSession: netYSessionFake)
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        netYService.getRecipes([""]) { success, RecipeStruc, error in
+            XCTAssertFalse(success)
+            XCTAssertNil(RecipeStruc)
+            XCTAssertNotNil(error)
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
     //4
-        func testGetRecipeShouldPostFailedCallbackIfIncorrectResponse() {
-            let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: nil, error: nil)
-            let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
-            let netYService = NetYService(netYSession: netYSessionFake)
-    
-            let expectation = XCTestExpectation(description: "Wait for queue change.")
-            netYService.getRecipes([""]) { success, RecipeStruc, error in
-                XCTAssertFalse(success)
-                XCTAssertNil(RecipeStruc)
-                XCTAssertNotNil(error)
-                expectation.fulfill()
-            }
-    
-            wait(for: [expectation], timeout: 0.01)
+    func testGetRecipeShouldPostFailedCallbackIfIncorrectResponse() {
+        let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: nil, error: nil)
+        let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
+        let netYService = NetYService(netYSession: netYSessionFake)
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        netYService.getRecipes([""]) { success, RecipeStruc, error in
+            XCTAssertFalse(success)
+            XCTAssertNil(RecipeStruc)
+            XCTAssertNotNil(error)
+            expectation.fulfill()
         }
-     //5
-        func testGetRecipeShouldPostFailedCallbackIfNoData() {
-            let fakeResponse = FakeResponse(response: nil, data: FakeResponseData.incorrectData, error: nil)
-            let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
-            let netYService = NetYService(netYSession: netYSessionFake)
-    
-            let expectation = XCTestExpectation(description: "Wait for queue change.")
-            netYService.getRecipes([""]) { success, RecipeStruc, error in
-                XCTAssertFalse(success)
-                XCTAssertNil(RecipeStruc)
-                XCTAssertNotNil(error)
-                expectation.fulfill()
-            }
-    
-            wait(for: [expectation], timeout: 0.01)
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
+    //5
+    func testGetRecipeShouldPostFailedCallbackIfNoData() {
+        let fakeResponse = FakeResponse(response: nil, data: FakeResponseData.incorrectData, error: nil)
+        let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
+        let netYService = NetYService(netYSession: netYSessionFake)
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        netYService.getRecipes([""]) { success, RecipeStruc, error in
+            XCTAssertFalse(success)
+            XCTAssertNil(RecipeStruc)
+            XCTAssertNotNil(error)
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
     //6
-        func testGetRecipeShouldPostFailedCallback() {
-            let fakeResponse = FakeResponse(response: nil, data: nil, error: FakeResponseData.networkError)
-            let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
-            let netYService = NetYService(netYSession: netYSessionFake)
-    
-            let expectation = XCTestExpectation(description: "Wait for queue change.")
-            netYService.getRecipes([""]) { success, RecipeStruc, error in
-                XCTAssertFalse(success)
-                XCTAssertNil(RecipeStruc)
-                XCTAssertNotNil(error)
-                expectation.fulfill()
-            }
-    
-            wait(for: [expectation], timeout: 0.01)
+    func testGetRecipeShouldPostFailedCallback() {
+        let fakeResponse = FakeResponse(response: nil, data: nil, error: FakeResponseData.networkError)
+        let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
+        let netYService = NetYService(netYSession: netYSessionFake)
+        
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        netYService.getRecipes([""]) { success, RecipeStruc, error in
+            XCTAssertFalse(success)
+            XCTAssertNil(RecipeStruc)
+            XCTAssertNotNil(error)
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
     
-
- }
+    
+}

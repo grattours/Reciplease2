@@ -50,7 +50,7 @@ class SearchRecipeViewController: UIViewController {
     }
     
     // from ViewDidload
-    func setup() {
+    private func setup() {
         self.navigationItem.title = "🍽 🌽🍅 RECIPLEASE 🥦🥕 🍽"
         guard let tabBar = self.tabBarController?.tabBar else { return }
         tabBar.tintColor = UIColor.green
@@ -116,7 +116,7 @@ extension SearchRecipeViewController: UITableViewDataSource, UITableViewDelegate
                 self.ingredientsTextField.text = self.ingredientsList[indexPath.row]
             })
             alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { (updateAction) in
-                self.ingredientsList[indexPath.row] = alert.textFields!.first!.text!
+                self.ingredientsList[indexPath.row] = (alert.textFields?.first!.text!)!
                 self.ingredientsTableView.reloadRows(at: [indexPath], with: .fade)
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
