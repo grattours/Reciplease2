@@ -41,7 +41,6 @@
 		FCE30A4E22B93EF8005F7CA3 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A4D22B93EF8005F7CA3 /* FakeResponseData.swift */; };
 		FCE30A5522B9415A005F7CA3 /* GetRecipe.json in Resources */ = {isa = PBXBuildFile; fileRef = FCE30A5422B9415A005F7CA3 /* GetRecipe.json */; };
 		FCE30A5722B941CF005F7CA3 /* GetDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = FCE30A5622B941CF005F7CA3 /* GetDetail.json */; };
-		FCE30A5A22B94505005F7CA3 /* NetYServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A5922B94505005F7CA3 /* NetYServiceTests.swift */; };
 		FCE30A5C22B94C1E005F7CA3 /* RecipeJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE30A5B22B94C1E005F7CA3 /* RecipeJson.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,7 +101,6 @@
 		FCE30A4D22B93EF8005F7CA3 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		FCE30A5422B9415A005F7CA3 /* GetRecipe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetRecipe.json; sourceTree = "<group>"; };
 		FCE30A5622B941CF005F7CA3 /* GetDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetDetail.json; sourceTree = "<group>"; };
-		FCE30A5922B94505005F7CA3 /* NetYServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetYServiceTests.swift; sourceTree = "<group>"; };
 		FCE30A5B22B94C1E005F7CA3 /* RecipeJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,7 +310,6 @@
 		FCF5A42222BB83E20078B168 /* NeWorkTests */ = {
 			isa = PBXGroup;
 			children = (
-				FCE30A5922B94505005F7CA3 /* NetYServiceTests.swift */,
 				FC548F1122BA3478004C6B49 /* NetYServiceDetailTests.swift */,
 				FCE30A5622B941CF005F7CA3 /* GetDetail.json */,
 				FCE30A5422B9415A005F7CA3 /* GetRecipe.json */,
@@ -515,7 +512,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCE30A5A22B94505005F7CA3 /* NetYServiceTests.swift in Sources */,
 				FC9BA32922BCD69D00D29D14 /* ServiceTests.swift in Sources */,
 				FCD51FF722B3871000F089B2 /* RecipeServiceTest.swift in Sources */,
 				FCE30A4E22B93EF8005F7CA3 /* FakeResponseData.swift in Sources */,
