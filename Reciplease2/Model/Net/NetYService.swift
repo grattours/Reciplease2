@@ -25,8 +25,6 @@ class NetYService {
             list +=  ingredient + "+"
         }
         list = String(list.dropLast())
-        print("list")
-        print(list)
         guard let url = URL(string: createRecipeRequest(list)) else { return }
         netYSession.request(url: url) { responseData in
             guard responseData.response?.statusCode == 200 else {
