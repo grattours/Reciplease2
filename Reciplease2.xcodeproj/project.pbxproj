@@ -88,7 +88,6 @@
 		FC62B6E822B158E900921AF1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FC62B6EA22B15ED100921AF1 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		FC6D04E722B0DF7300F6A80D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		FC6D04FF22B0F64400F6A80D /* DetailsFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFavoriteView.swift; sourceTree = "<group>"; };
 		FC6D051422B0FFB500F6A80D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		FC6D051D22B1185200F6A80D /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		FC9BA32822BCD69D00D29D14 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceTests.swift; path = Reciplease2Tests/ServiceTests.swift; sourceTree = SOURCE_ROOT; };
@@ -247,7 +246,6 @@
 		FC6D04FD22B0F62500F6A80D /* favoriteViews */ = {
 			isa = PBXGroup;
 			children = (
-				FC6D04FF22B0F64400F6A80D /* DetailsFavoriteView.swift */,
 				FC6D051422B0FFB500F6A80D /* FavoriteTableViewCell.swift */,
 			);
 			path = favoriteViews;

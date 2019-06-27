@@ -25,7 +25,9 @@ class SearchRecipeViewController: UIViewController {
     
     // add ingredient to the list
     @IBAction func addlIngredientsButton() {
-        guard let inputString = ingredientsTextField.text else { return }
+        guard let inputString = ingredientsTextField.text, inputString.count > 0 else {
+            self.presentAlert(message: .errorIngredientneeded)
+            return }
         var cleanString = inputString.lowercased()
         cleanString = cleanString.trimmingCharacters(in: .whitespacesAndNewlines)
         ingredientsList = cleanString.components(separatedBy: " ")

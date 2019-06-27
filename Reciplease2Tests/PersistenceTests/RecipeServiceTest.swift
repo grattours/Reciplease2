@@ -31,10 +31,10 @@ class RecipeServiceTest: XCTestCase {
     }
 
     override func tearDown() {
+        super.tearDown()
         deleteAllDetailedRecipeDataTests()
         coreDataStack = nil
         recipeService = nil
-        super.tearDown()
     }
     
     private func deleteAllDetailedRecipeDataTests() {
@@ -153,4 +153,20 @@ class RecipeServiceTest: XCTestCase {
         XCTAssertTrue(IsDeleteOk)
         
     }
+    
+    func testGiven2RecipesWhenDelete1RecipeThenCountEqual1() {
+        
+        //Given
+        recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
+        recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
+        
+        //When
+       // _ = recipeService.delete(recipeSample1.id)
+         _ = recipeService.deleteRecipe("04")
+        let recipes = recipeService.all
+        
+        //Then
+        XCTAssertEqual(recipes.count, 1)
+    }
+    
 }

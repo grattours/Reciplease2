@@ -83,20 +83,20 @@ class NetYServiceDetailTests: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     //19 OK incorrect nil
-    func diseable_testGetDetailShouldFailedCallbackIfResponseOKIncorrectDataAndNoError() {
+    func testGetDetailShouldFailedCallbackIfResponseOKIncorrectDataAndNoError() {
         let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.incorrectData, error: nil)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
         let netYService = NetYService(netYSession: netYSessionFake)
         
-        //let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
         netYService.getRecipDetail(id: "") { success, RecipeDetail, error in
             XCTAssertFalse(success)
             XCTAssertNil(RecipeDetail)
             XCTAssertNotNil(error)
-            //expectation.fulfill()
+            expectation.fulfill()
         }
         
-        //wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.01)
     }
     
     //20 OK incorrect error
@@ -117,20 +117,20 @@ class NetYServiceDetailTests: XCTestCase {
     }
     
     //21 KO correct nil
-    func diseable_testGetDetailShouldFailedCallbackIfIncorrectResponse() {
-        let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.GetDetailCorrectData, error: nil)
+    func testGetDetailShouldFailedCallbackIfIncorrectResponse() {
+        let fakeResponse = FakeResponse(response: FakeResponseData.responseKO, data: FakeResponseData.GetDetailCorrectData, error: FakeResponseData.networkError)
         let netYSessionFake = NetYSessionFake(fakeResponse: fakeResponse)
         let netYService = NetYService(netYSession: netYSessionFake)
         
-        // let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
         netYService.getRecipDetail(id: "") { success, RecipeDetail, error in
             XCTAssertFalse(success)
             XCTAssertNil(RecipeDetail)
             XCTAssertNotNil(error)
-            // expectation.fulfill()
+            expectation.fulfill()
         }
         
-        // wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.01)
     }
     
     //22 KO correct error

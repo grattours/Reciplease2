@@ -68,7 +68,7 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.recipeDetailList = [recipeDetail]
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "segueToDetail", sender: self)
-                    self.activityIndicatorView.stopAnimating()
+                    // self.activityIndicatorView.stopAnimating()
                     self.activityIndicatorView.isHidden = true
                 }
             } else {
