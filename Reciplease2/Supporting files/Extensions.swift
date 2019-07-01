@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 // use case example : recipeSave.time = recipeToSave.totalTimeInSeconds.intToStringMnSec()
 extension Int {
@@ -28,6 +29,7 @@ extension UIViewController {
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
     }
+
     
 }
 
@@ -35,24 +37,25 @@ extension UIViewController {
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
         contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() {
-                self.image = image
+        Alamofire.request(url).responseData { response in
+            switch response.result {
+            case .success:
+                if let data = response.result.value {
+                    let image = UIImage(data: data)
+                   DispatchQueue.main.async() {
+                    self.image = image
+                    }
+                }
+            case .failure(let error):
+               print("error \(error.localizedDescription)")
             }
-            }.resume()
+        }
     }
     
     func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }
-    
     
 }
 // use case example : recipeSave.image = urlImage.absoluteString.urlImagetoDataImage as NSData? as Data?

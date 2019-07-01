@@ -99,7 +99,7 @@ class DetailRecipeViewController: UIViewController {
     
 }
 
-// TableView Recipe ingredients
+// MARK: - TableView Recipe ingredients
 extension DetailRecipeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -14,9 +14,9 @@ class ListRecipeViewController: UIViewController {
     @IBOutlet weak var recipsTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    // private let recipeService = RecipeService()
     private let netYService = NetYService()
-    
+    let imageView = UIImageView()
+    let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     var recipsList = [Infos]()
     var recipeDetailList = [RecipeDetail]()
     var recipe: Infos?
@@ -28,12 +28,18 @@ class ListRecipeViewController: UIViewController {
         recipsTableView.tableFooterView = UIView()
         self.navigationItem.title = "🍽 👩🏼‍🍳  \(recipsList.count) RECIPES  👨🏼‍🍳 🍽"
         activityIndicatorView.isHidden = true
+        activityIndicatorView.stopAnimating()
+        imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 300)
+        imageView.image = UIImage.init(named: "recipes")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        view.addSubview(imageView)
         recipsTableView.reloadData()
     }
     
 }
 
-//  delegate tableView recipes list
+// MARK: -   delegate tableView recipes list
 extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,7 +50,7 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         return recipsList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {  // gérer l'alerte ? (enum/extension)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard indexPath.item < recipsList.count else { fatalError("index out of range")}
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "recipCell", for: indexPath) as? RecipeTableViewCell else {
             return UITableViewCell()
@@ -60,7 +66,7 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
         let id = self.recipsList[indexPath.row].id
         getRecipsDetail(id: id)
     }
-    
+    // MARK: - searh recipe detail with id
     private func getRecipsDetail(id: String) {
         netYService.getRecipDetail(id: id) { (success, recipDetailData, error) in
             if success {
@@ -68,13 +74,19 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.recipeDetailList = [recipeDetail]
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "segueToDetail", sender: self)
-                    // self.activityIndicatorView.stopAnimating()
                     self.activityIndicatorView.isHidden = true
+                    self.activityIndicatorView.stopAnimating()
                 }
             } else {
                 self.presentAlert(message: .errorNoSource)
             }
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y = 400 - (scrollView.contentOffset.y + 300)
+        let height = min(max(y, 60), 400)
+        imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: height)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

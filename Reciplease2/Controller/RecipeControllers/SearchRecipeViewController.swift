@@ -15,12 +15,18 @@ class SearchRecipeViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     private var netYService = NetYService()
+
+    
     var ingredientsList : [String] = []
     var recipeList = [Infos]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        activityIndicatorView.isHidden = true
     }
     
     // add ingredient to the list
@@ -43,8 +49,9 @@ class SearchRecipeViewController: UIViewController {
     
     // search recipers
     @IBAction func searchRecipes(_ sender: Any) {
-        if ingredientsList != [] {        
+        if ingredientsList != [] {
             activityIndicatorView.isHidden = false
+            activityIndicatorView.startAnimating()
             setupRecipesListData(ingredientsList)
         } else {
             self.presentAlert(message: .errorIngredientneeded)
@@ -58,11 +65,12 @@ class SearchRecipeViewController: UIViewController {
         tabBar.tintColor = UIColor.green
         tabBar.barTintColor = UIColor.black
         tabBar.unselectedItemTintColor = UIColor.white
-        ingredientsTableView.reloadData()
         activityIndicatorView.isHidden = true
+        activityIndicatorView.stopAnimating()
+        ingredientsTableView.reloadData()
     }
     
-    // search data from the API
+    // MARK: - search data from the API with ingredient
     private func setupRecipesListData(_ ingredientsList: [String]) {
         netYService.getRecipes(ingredientsList) { (success, recipeStruc, error) in
             guard let nb = recipeStruc?.matches.count else {
@@ -73,11 +81,12 @@ class SearchRecipeViewController: UIViewController {
                 self.recipeList = recipeStruc.matches
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "segueToRecipList", sender: self)
-                    self.activityIndicatorView.isHidden = true
+                    self.activityIndicatorView.stopAnimating()
                 }
             } else {
                 self.presentAlert(message: .errorRecipeLoaded)
                 self.activityIndicatorView.isHidden = true
+                self.activityIndicatorView.stopAnimating()
             }
         }
         
@@ -93,7 +102,7 @@ class SearchRecipeViewController: UIViewController {
     
 }
 
-// delegate tableView ingredients
+// MARK: - delegate tableView ingredients
 extension SearchRecipeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {

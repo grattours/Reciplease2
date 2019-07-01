@@ -129,16 +129,16 @@ class RecipeServiceTest: XCTestCase {
     }
     
     // test erase one favorite when no data
-    func testGivenOneFavoriteWhenDeleteFavoriteOK() {
+    func testGivenOneFavoriteWhenDeleteFavoriteOK2() {
         //Given
-//        recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
-//        recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
+                recipeService.saveRecipe(recipeExample3, "Saumon Wasabi")
+                recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
         //When
-        let IsDeleteOk = recipeService.deleteRecipe(recipeExample4.id)
+        let IsDeleteOk2 = recipeService.deleteAllFavorite()
         
         //Then
-        XCTAssertFalse(IsDeleteOk)
-
+        XCTAssertTrue(IsDeleteOk2)
+        
     }
 
     // test erase one favorite when no data

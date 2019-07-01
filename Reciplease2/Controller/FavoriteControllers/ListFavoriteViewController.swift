@@ -45,7 +45,7 @@ class ListFavoriteViewController: UIViewController {
     
 }
 
-// tableView listFavorite
+// MARK: - tableView listFavorite
 extension ListFavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -92,7 +92,7 @@ class DetailFavoriteViewController: UIViewController {
     
 }
 
-// table view detail recipe with  ingredientlines
+// MARK: - table view detail recipe with  ingredientlines
 extension DetailFavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
