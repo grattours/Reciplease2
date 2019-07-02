@@ -15,7 +15,6 @@
 		FC16236822B0C6C200CC6234 /* Reciplease2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC16236622B0C6C200CC6234 /* Reciplease2.xcdatamodeld */; };
 		FC16236A22B0C6C300CC6234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC16236922B0C6C300CC6234 /* Assets.xcassets */; };
 		FC16236D22B0C6C300CC6234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC16236B22B0C6C300CC6234 /* LaunchScreen.storyboard */; };
-		FC2181FC22CA4D8000F16691 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2181FB22CA4D8000F16691 /* ActivityIndicator.swift */; };
 		FC3AC76122B3732A0059F610 /* RecipeJsonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AC76022B3732A0059F610 /* RecipeJsonDetails.swift */; };
 		FC548F1222BA3478004C6B49 /* NetYServiceDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548F1122BA3478004C6B49 /* NetYServiceDetailTests.swift */; };
 		FC55DE3C22BCD140006C5E43 /* NetSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC55DE3B22BCD140006C5E43 /* NetSessionFake.swift */; };
@@ -75,7 +74,6 @@
 		FC16236E22B0C6C300CC6234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC16237322B0C6C400CC6234 /* Reciplease2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Reciplease2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC16237922B0C6C400CC6234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC2181FB22CA4D8000F16691 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		FC3AC76022B3732A0059F610 /* RecipeJsonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeJsonDetails.swift; sourceTree = "<group>"; };
 		FC548F1122BA3478004C6B49 /* NetYServiceDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetYServiceDetailTests.swift; sourceTree = "<group>"; };
 		FC55DE3B22BCD140006C5E43 /* NetSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetSessionFake.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				FC62B6E822B158E900921AF1 /* Extensions.swift */,
-				FC2181FB22CA4D8000F16691 /* ActivityIndicator.swift */,
 				FC62B6D622B154B700921AF1 /* AlertsEnum.swift */,
 				FC62B6DA22B155D900921AF1 /* SuperMario256.ttf */,
 				FC62B6EA22B15ED100921AF1 /* ApiKeys.plist */,
@@ -495,7 +492,6 @@
 				FC62B6E522B1586B00921AF1 /* DetailFavoriteViewController.swift in Sources */,
 				FC6D051522B0FFB500F6A80D /* FavoriteTableViewCell.swift in Sources */,
 				FC62B6E922B158E900921AF1 /* Extensions.swift in Sources */,
-				FC2181FC22CA4D8000F16691 /* ActivityIndicator.swift in Sources */,
 				FC6D04E822B0DF7300F6A80D /* CoreDataStack.swift in Sources */,
 				FCE30A4822B90C17005F7CA3 /* NetYSession.swift in Sources */,
 				FC16236022B0C6C200CC6234 /* AppDelegate.swift in Sources */,

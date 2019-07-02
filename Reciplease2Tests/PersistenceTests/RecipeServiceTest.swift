@@ -161,7 +161,6 @@ class RecipeServiceTest: XCTestCase {
         recipeService.saveRecipe(recipeExample4, "Lapin Moutarde")
         
         //When
-       // _ = recipeService.delete(recipeSample1.id)
          _ = recipeService.deleteRecipe("04")
         let recipes = recipeService.all
         

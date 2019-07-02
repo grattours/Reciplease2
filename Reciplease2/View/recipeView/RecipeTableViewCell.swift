@@ -25,21 +25,12 @@ class RecipeTableViewCell: UITableViewCell {
     var recipe: Infos! {
         didSet {
             likeLabel.text = recipe.rating.description + "k"
-          //   faire une fonction
-            let time = recipe.totalTimeInSeconds
-            let hours = Int(time) / 3600
-            let minutes = Int(time) / 60 % 60
-            timeLabel.text = String(format: "%01i:%02i", hours, minutes)
+            timeLabel.text = recipe.totalTimeInSeconds.intToStringMnSec()
             nameLabel.text = recipe.recipeName
             ingredientsLabel.text = recipe.ingredients.joined(separator: " ")
-            //recipeImageView.image = UIImage(named: "chef")
             let urlImage = recipe.smallImageUrls[0]
-            //let urlImage = recipe.imageUrlsBySize.the90
             let urlImage2 = urlImage.replacingOccurrences(of: "=s90", with: "=s200")
             recipeImageView.downloaded(from: urlImage2)
-//            if let imageData =  recipeImageView.image {
-//                recipeImageView.image = image(imageData,withSize: CGSize(width: 800, height: 600))
-//           }
             let gradientLayer = CAGradientLayer()
             gradientLayer.frame = self.littleView.bounds
             gradientLayer.colors = [UIColor.black.cgColor, UIColor.gray.cgColor]
@@ -50,7 +41,6 @@ class RecipeTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        //littleView.backgroundColor = UIColor.black
     }
     
     private func image( _ image:UIImage, withSize newSize:CGSize) -> UIImage {
