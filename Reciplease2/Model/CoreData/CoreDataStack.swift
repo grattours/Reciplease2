@@ -5,7 +5,7 @@
 //  Created by Luc Derosne on 12/06/2019.
 //  Copyright © 2019 Luc Derosne. All rights reserved.
 //
-import UIKit
+
 import Foundation
 import CoreData
 
@@ -26,6 +26,7 @@ class CoreDataStack {
         let container = NSPersistentContainer(name: self.modelName)
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
+                print("Unresolved error \(error), \(error.userInfo)")
             }
         }
         return container

@@ -45,6 +45,7 @@ class SearchRecipeViewController: UIViewController {
         ingredientsList = []
         ingredientsTextField.text = ""
         ingredientsTableView.reloadData()
+        activityIndicatorView.isHidden = true
     }
     
     // search recipers

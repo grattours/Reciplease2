@@ -22,8 +22,8 @@ class DetailFavoriteViewController: UIViewController {
     private let recipService = RecipeService()
     private var netYService = NetYService()
     
-    var recipeList = [Recipe]()// all favorite
-    var recipSelected: Recipe? // data one favorite
+    var recipeList = [RecipeData]()// all favorite
+    var recipSelected: RecipeData? // data one favorite
     var ingredientLinesSelected = [String]() // components from
     
     override func viewDidLoad() {

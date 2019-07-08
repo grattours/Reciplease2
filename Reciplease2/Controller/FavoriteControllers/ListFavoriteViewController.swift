@@ -12,9 +12,9 @@ class ListFavoriteViewController: UIViewController {
     
     @IBOutlet weak var favoritesListTabview: UITableView!
     
-    private var favoritesRecipes: [Recipe]!
+    private var favoritesRecipes: [RecipeData]!
     private var recipeService = RecipeService()
-    var recipFavoriteSelected: Recipe?
+    var recipFavoriteSelected: RecipeData?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

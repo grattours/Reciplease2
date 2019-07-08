@@ -22,7 +22,7 @@ class favoriteTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    var favoritesRecipes: Recipe! { // from Coredata
+    var favoritesRecipes: RecipeData! { // from Coredata
         didSet {
             favoriteLabel.text = favoritesRecipes.name
             ratingLabel.text = favoritesRecipes.rate

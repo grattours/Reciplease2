@@ -25,8 +25,8 @@ class RecipeService {
         self.coreDataStack = coreDataStack
     }
     
-    var all: [Recipe] {
-        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+    var all: [RecipeData] {
+        let request: NSFetchRequest<RecipeData> = RecipeData.fetchRequest()
         guard let recipes = try? managedObjectContext.fetch(request) else {return []}
         return recipes
     }
@@ -34,7 +34,7 @@ class RecipeService {
     // save recipe as favorite in recipe Detail list
     func saveRecipe(_ recipeToSave: RecipeDetail, _ ingredientsString: String) {
         // context creation
-        let recipeSave = Recipe(context: managedObjectContext)
+        let recipeSave = RecipeData(context: managedObjectContext)
         // context implementation
         recipeSave.id = recipeToSave.id
         recipeSave.ingredientsLines = recipeToSave.ingredientLines.joined(separator: ",")
@@ -51,7 +51,7 @@ class RecipeService {
     
     // delete recipe favori from Core Data with id
     func deleteRecipe(_ id: String) -> Bool {
-        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        let request: NSFetchRequest<RecipeData> = RecipeData.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", id)
         guard let recipe = try? managedObjectContext.fetch(request), recipe.count > 0 else {
             return false
@@ -63,7 +63,7 @@ class RecipeService {
     
     // delete all favorite in CoreData from favorite list
     func deleteAllFavorite() -> Bool {
-        let fetchRequest: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        let fetchRequest: NSFetchRequest<RecipeData> = RecipeData.fetchRequest()
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
         do {
             try managedObjectContext.execute(batchDeleteRequest)
@@ -77,7 +77,7 @@ class RecipeService {
     // is recipe already favorite ?
     func checkIfRecipeIsFavorite(id: String) -> Bool {
         var count = 0
-        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        let request: NSFetchRequest<RecipeData> = RecipeData.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", id)
         request.fetchLimit = 1
         do {
